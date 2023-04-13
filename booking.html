@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--FOLDERS CODE IS LINKED TOO-->
+    <link rel="stylesheet" type="text/css" media="all" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="all" href="js/script.js">
+    <link rel="stylesheet" type="text/css" media="all" href="js/form.js">
+    <link rel="icon" type="image/x-icon" href="/images/SashayIcon.svg"> 
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!--FONTS FOR WEB-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <!--TITLE OF PAGE-->
+    <title>Sashay Chante</title>
+</head>
+<body style="background-color:#ffd700">
+
+<header>
+    <nav>
+        <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+          <label for="openSidebarMenu" class="sidebarIconToggle" >
+              <div class="spinner diagonal part-1" style="background-color: #ffd700"></div>
+              <div class="spinner horizontal" style="background-color: #ffd700"></div>
+              <div class="spinner diagonal part-2" style="background-color: #ffd700"></div>
+              
+          </label>
+        <div id="sidebarMenu">
+            <ul class="sidebarMenuInner">
+                <li><a href="index.html" alt="Home Page">Home</a></li>
+                <li><a href="about.html" alt="About Page">About</a></li>
+                <li><a href="gallery.html" alt="Gallery">Gallery</a></li>
+                <li><a href="booking.html" alt="Booking">Booking</a></li>
+                
+                <div class="MenuIconboxes">
+                    <div class="FacebookMenuIcon"><a href="https://www.facebook.com/ChanteDragQueen" target="_blank" rel="noopener noreferrer"><img src='images/socialicons/socialiconspink.png' alt="facebookicon"/></a></div>
+                    <div class="InstagramMenuIcon"><a href="https://www.instagram.com/thesashaychante/" target="_blank" rel="noopener noreferrer"><img src='images/socialicons/socialiconspink2.png' alt="instagramicon"/></a></div>
+                    <div class="EmailMenuIcon"><a href="booking.html" target="_blank" rel="noopener noreferrer"><img src='images/socialicons/socialiconspink3.png' alt="emailicon"/></a></div>
+                </div>
+            </ul>
+            <ul class="sidebarMenuInner">
+                <img src="images/logos_headings/www.sashaychante.comTitle.png" height="15px";>
+            </ul>
+        </div>
+    </nav>
+    <img src="images/banners/BANNER1200x551px4.png" alt="SashayChanteBanner" position="relative";>
+    <container>
+        <div class="ocean">
+            <div class="wave5"></div>
+        </div>
+    </container>
+</header>
+
+
+ 
+    <div id="indexsection1">
+        <h1 style="color:#00a3ff">Book Me</span></h1>
+    </div> 
+
+
+    <div class="formcontainer" >
+        <div class="signup-form">
+            <form action='https://getform.io/f/e4ffe4cf-4e16-4749-90e7-893bb7392e78' method='POST' enctype='multipart/form-data'>
+                <div id="form-title"></div>
+                <!--HEADING - ENTER PERSONAL DETAILS-->
+                <div id="personaldetailsheading"></div>
+                    <script type="text/babel">
+                        function PersonalDetails() {return <h6 class="form-title" required>SELECT DATE OF EVENT AND PACKAGE</h6>}
+                        ReactDOM.render(<PersonalDetails />, document.getElementById('personaldetailsheading'))
+                    </script>
+
+                <!--CALENDAR DATE SELECTOR-->
+                <div class="small">Date of your Event</div>
+                    <input type="date" name="date" class="date">
+                        <script type="text/babel">
+                            function Date() {return <input type="text" name="date" id="date"/>}
+                            ReactDOM.render(<Date />, document.getElementById('date'))
+                        </script>
+                    
+                    <br>
+
+                <!--SERVICES DROP DOWN MENU-->
+                <div class="small">Sashay Chante Performance Package you'd like</div>
+                    <select id="service" name="service">
+                        <option value="Default">Select Performance Package:</option>
+                        <option value="Show">Show</option>
+                        <option value="Party">Party</option>
+                        <option value="Hen's Do">Hen's Do</option>
+                        <option value="Corporate Function">Corporate Function</option>
+                        <option value="Fundraiser">Fundraiser</option>
+                        <option value="Special Appearance">Special Appearance</option>
+                    </select>
+                    <script type="text/babel">
+                    ReactDOM.render(<Service />, document.getElementById('service'))
+                    </script>
+
+                <div class="formblueboxtitle">PERSONAL INFORMATION</div>
+                <!--ENTER FIRST AND LAST NAME-->
+                    <div id="form-group"></div>
+                        <script type="text/babel">
+                            function Name() {return <input type="text" name="name" id="name" placeholder="Your Name" required/>}
+                            ReactDOM.render(<Name />, document.getElementById('form-group'))
+                        </script>
+                        <div class="small">First and Last Name</div>
+                
+                <!--ENTER EMAIL ADDRESS-->
+                    <div id="form-group2"></div>
+                        <script type="text/babel">
+                            function Email() {return <input type="email" name="email" id="email" placeholder="Your Email" regex="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/" required />}
+                            ReactDOM.render(<Email />, document.getElementById('form-group2'))
+                        </script>
+                        <div class="small">Example: xxx@gmail.com, xxx@hotmail.com </div>
+
+                <!--ENTER PHONE NUMBER-->
+                    <div id="form-group3"></div>
+                        <script type="text/babel">
+                            function Phone() {return <input type="tel" name="phone" id="phone" placeholder="021 XXX XXXX" pattern="[\d]{3} [\d]{3} [\d]{4<}" required/>}
+                            ReactDOM.render(<Phone />, document.getElementById('form-group3'))
+                                document.getElementById("phone").addEventListener("keydown", function(e) {
+                                const tel = this.value;
+                                    if ((tel.length == 14 || e.which == 32) & e.which !== 8) e.preventDefault();
+                                    if ((tel.length == 3 || tel.length == 7) && e.which !== 8)
+                                        this.value = this.value + " ";
+                                });
+                        </script>
+                        <div class="small">Example:(021 000 0000)</div>
+                    
+                    <div class="formblueboxtitle">ADD MESSAGE</div>
+                        <div id="messagecontainer"></div>
+                            <script type="text/babel">
+                                function MessageContainer() {return <textarea type="text" name="message" id="message" placeholder="Message" required/>}
+                                ReactDOM.render(<MessageContainer />, document.getElementById('messagecontainer'))
+                            </script>
+
+                <button class="form-submit">SEND REQUEST</button>
+                <script type="text/babel">
+                    function SubmitButton() {return <button type="submit" class="form-submit" href="mailto:tanjotanning@gmail.com" method='POST' name="submit" id="submit" value="Register"/>}
+                    ReactDOM.render(<SubmitButton />, document.getElementsByClassName('form-submit'))
+                </script>
+                <br><br><div class="small">Once you press the "Send Request" button an email will be sent through to Chante. She will reply to the email address you have declared above and any additional information of your event you wish to disclose, can be added to the message box. xx</div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+"
+    <footer>
+        <img src="images/logos_headings/SashayLogoBlue.png" height="35px";>
+        <div class="FooterIconboxes">
+            <div class="FacebookMenuIcon"><a href="https://www.facebook.com/ChanteDragQueen" target="_blank" rel="noopener noreferrer"><img src='images/socialicons/socialiconsblue.png' alt="facebookicon"/></a></div>
+            <div class="InstagramMenuIcon"><a href="https://www.instagram.com/thesashaychante/" target="_blank" rel="noopener noreferrer"><img src='images/socialicons/socialiconsblue2.png' alt="instagramicon"/></a></div>
+            <div class="EmailMenuIcon"><a href="booking.html" target="_blank" rel="noopener noreferrer"><img src='images/socialicons/socialiconsblue3.png' alt="emailicon"/></a></div>
+        </div>
+        
+        <div class="menucopyrightsentence"><br><br><a style="color:#00a3ff">&copy; Web/Graphic Design - Ally Lamb&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Logo Design - Alex Crighton</a></div>
+    </footer>
+
+</body>
+
+</html>
